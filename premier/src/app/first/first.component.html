@@ -1,0 +1,11 @@
+show tag 'p' : <input type="checkbox" [(ngModel)]="show"> {{ show }}
+
+<pre [hidden]=!show>
+    {{ varFirst }} - hidden
+ </pre>
+<pre *ngIf="show">
+   {{ varFirst }} - if
+</pre>
+<p>
+  <button (click)="changeEmpty('gogogo')">Change Empty</button>
+</p>

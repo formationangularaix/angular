@@ -1,0 +1,14 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!-- <div [ngStyle]="{'background-color': color}" class="text-center"> -->
+<div [class]='color'>
+  <pre>Tap a button to change div backgrond color</pre>
+  <button (click)="changeColor(button1_attrs.value)" [class]='button1_attrs.value'>{{ button1_attrs.string }}</button>
+  
+  <button (click)="changeColor(button2_attrs.value)"
+  [ngStyle]="{'background-color': button2_attrs.value, 'color': 'white'}">{{ button2_attrs.string }}</button>
+  
+  <button (click)="changeColor(button3_attrs.value)"
+  [class]='button3_attrs.value'>{{ button3_attrs.string }}</button>
+</div>
+<hr>
+<app-repeat></app-repeat>

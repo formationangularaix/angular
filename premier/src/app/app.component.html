@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Bem-vindo {{ name }} {{ lastName }}!    
+  </h1>
+  <pre class="pre_class">esse é o seu projeto {{ title }}!</pre>
+  <button class="btn" (click)="modifyName()">Modify Name</button>
+  <pre [textContent]="title"></pre>
+
+  <hr>
+    <input type="text" name="" [(ngModel)]="name">
+
+
+</div>
+<hr>
+<section>
+  <app-first></app-first>
+</section>
+<section>
+  <app-first></app-first>
+</section>
+

@@ -1,0 +1,47 @@
+<!-- <div>
+  Ordered table by : {{ orderBy.label }}
+  <table  class="table text-center">
+    <thead class="thead-dark">
+        <tr>
+            <th *ngFor="let data of data_to_use2" (click)="changeOrderBy(data)" >
+              {{ data['label'] }}
+              <span [hidden]="orderBy.value !== data['value']"
+              class="fas" [ngClass]="{'fa-sort-up': reverse, 'fa-sort-down': !reverse}"></span>
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users | orderBy : orderBy.value: reverse">
+        <td *ngFor="let data of data_to_use2">
+          <ng-container *ngIf="data['show_value']; then thenTemplate; else elseTemplate"></ng-container>
+          <ng-template #thenTemplate>
+              <span>{{ user[data['value']] }}</span>
+          </ng-template>
+          <ng-template #elseTemplate>
+              <span class="fas" [ngClass]="{'fa-female': user[data['value']] == 'women', 'fa-male': user[data['value']] == 'men'}"></span>
+          </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</div> -->
+
+<div>
+    Ordered table by : {{ orderBy.label }}
+    <table  class="table text-center">
+      <thead class="thead-dark">
+          <tr>
+              <th *ngFor="let data of data_to_use2" (click)="changeOrderBy(data)" >
+                {{ data['label'] }}
+                <span [hidden]="orderBy.value !== data['value']"
+                class="fas" [ngClass]="{'fa-sort-up': reverse, 'fa-sort-down': !reverse}"></span>
+              </th>
+          </tr>
+      </thead>
+      <tbody>
+        <app-user [user]="user" *ngFor="let user of users | orderBy : orderBy.value: reverse"></app-user>
+      </tbody>
+    </table>
+  
+  </div>
