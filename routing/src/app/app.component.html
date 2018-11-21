@@ -1,0 +1,48 @@
+<nav class="navbar navbar-inverse">
+  <ul class="nav navbar-nav">
+    <li>
+      <a [routerLink]="['one']" routerLinkActive="active">
+        Page 1
+      </a>
+    </li>    
+    <li>
+      <a [routerLink]="['two']" routerLinkActive="active">
+        Page 2
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['three']" routerLinkActive="active">
+        Page 3
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="['four']" routerLinkActive="active">
+        Page 4
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="[ {outlets: {primary:['four'],outletaside1:['aside1']}} ]" routerLinkActive="active">
+        Aside
+      </a>
+    </li>
+    <li>
+      <a [routerLink]="[ {outlets: {outletaside1:[]}} ]" routerLinkActive="active">
+        Just Aside
+      </a>
+    </li>
+    <li>
+        <a [routerLink]="['three/25687']" routerLinkActive="active">
+        Page 3 +my parameter
+      </a>
+    </li>
+    
+  </ul>
+</nav>
+
+<div>
+  <router-outlet></router-outlet>
+</div>
+<hr>
+<div>
+  <router-outlet name="outletaside1"></router-outlet>
+</div>
