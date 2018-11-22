@@ -1,3 +1,42 @@
-<p>
-  test works!
-</p>
+<ol>
+    <li>
+      <mat-form-field>
+        <input matInput [(ngModel)]="name" placeholder="What's your name?">
+      </mat-form-field>
+    </li>
+    <li>
+      <button mat-raised-button (click)="openDialog()">Pick one</button>
+    </li>
+    <li *ngIf="user_number">
+      You chose: <i>{{ user_number }}</i>
+    </li>
+  </ol>
+  
+  
+  
+  <!-- <button (click)="showConfig()">MyButton</button> -->
+  <div *ngFor="let user of users">
+    <img src="{{ user.picture.medium }}" alt="">
+    <span>{{ user.name.first }}</span>
+  </div>
+
+  <!-- <div>
+      <table  class="table text-center">
+        <thead class="thead-dark">
+            <tr>
+                <th *ngFor="let data of data_to_use2" (click)="changeOrderBy(data)" >
+                  {{ data['label'] }}
+                  <span [hidden]="orderBy.value !== data['value']"
+                  class="fas" [ngClass]="{'fa-sort-up': reverse, 'fa-sort-down': !reverse}"></span>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+          <td *ngFor="let user of users">
+            
+          </td>
+        </tbody>
+      </table>
+    
+    </div> -->
+

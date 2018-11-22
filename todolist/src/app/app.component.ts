@@ -1,20 +1,31 @@
-import { Component, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { StorageService } from './storage.service';
-// import { TodosComponent } from './todos/todos.component';
+
+
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit  {
   title = 'todolist';
 
   todos = []
 
-  constructor(private theStorage: StorageService) { 
+
+
+  constructor(private theStorage: StorageService,
+    ) { 
 
   }
+
+  ngOnInit() {
+    
+  }
+
+  
 
   saveTodo(form) {
     console.log(form)
