@@ -14,6 +14,14 @@ export class TestComponent implements OnInit {
   users: any
 
   user_number: number;
+  data_to_use = [
+    {'value': 'index', 'label': 'Index', 'show_value': true, 'orderby': true, 'active': false},
+    {'value': 'picture', 'label': 'First Name', 'show_value': true, 'orderby': false, 'active': false},
+    {'value': 'name', 'label': 'Last Name', 'show_value': true, 'orderby': false, 'active': false},
+    {'value': 'age', 'label': 'Age', 'show_value': true, 'orderby': false, 'active': false},
+    {'value': 'gender', 'label': 'Gender', 'show_value': false, 'orderby': false, 'active': false},
+    {'value': 'email', 'label': 'E-mail', 'show_value': true, 'orderby': false, 'active': false}
+  ];
 
   constructor(private configService: DataService,
     public dialog: MatDialog,
