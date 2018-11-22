@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { StorageService } from '../storage.service';
 
 @Component({
   selector: 'app-todos',
@@ -10,7 +11,9 @@ export class TodosComponent implements OnInit {
   @Input()todo: any;
   @Input()todos: any;
 
-  constructor() { }
+  constructor(private theStorage: StorageService) { 
+
+  }
 
   ngOnInit() {
   }
@@ -21,6 +24,13 @@ export class TodosComponent implements OnInit {
 
   deleteTodo(variable){
     this.todos.splice(this.todos.indexOf(variable), 1);
+    this.saveStore(this.todos);
+  }
+
+  saveStore(todosArray){
+    console.log('TODOS by Line', todosArray);
+    let stringArray = JSON.stringify(todosArray);
+    this.theStorage.setStorage('all_todos', stringArray);
   }
 
 }

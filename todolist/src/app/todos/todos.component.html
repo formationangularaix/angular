@@ -1,7 +1,7 @@
 <div class="input-group mb-3">
   <div class="input-group-prepend">
     <div class="input-group-text">
-      <input type="checkbox" id="idCheck" name="isActive"
+      <input type="checkbox" id="idCheck" name="isActive" (change)="saveStore(todos)"
         ngModel #checkTodo="ngModel" [(ngModel)]="todo.todo_state">
       <!-- <input type="checkbox" aria-label="Checkbox for following text input"> -->
     </div>
@@ -11,5 +11,8 @@
   <div>
       <button type="button" class="btn list-group-item-action" (click)="deleteTodo(todo)"><i class="far fa-trash-alt"></i></button>
   </div>
+  <!-- <div>
+      <button type="button" class="btn list-group-item-action" (click)="saveStore(todos)"><i class="far fa-trash-alt"></i></button>
+  </div> -->
 </div>
 

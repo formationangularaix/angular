@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { StorageService } from './storage.service';
 // import { TodosComponent } from './todos/todos.component';
 
 @Component({
@@ -9,9 +10,11 @@ import { Component, Input } from '@angular/core';
 export class AppComponent {
   title = 'todolist';
 
-  // @Input() todos: TodosComponent[];
-
   todos = []
+
+  constructor(private theStorage: StorageService) { 
+
+  }
 
   saveTodo(form) {
     console.log(form)
@@ -30,6 +33,15 @@ export class AppComponent {
 
     form.reset();
 
+    this.setStorageTodos(this.todos);
+
+
+  }
+
+
+  setStorageTodos(myTodos){
+    let stringArray = JSON.stringify(myTodos);
+    this.theStorage.setStorage('all_todos', stringArray);
   }
 
 
