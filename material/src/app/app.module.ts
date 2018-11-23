@@ -9,13 +9,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import {MatButtonModule, MatCheckboxModule, MatFormFieldModule, MatInputModule, MatRippleModule } from '@angular/material';
 import { FormsModule } from '@angular/forms';
+import { DirtestDirective } from './dirtest.directive';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PereComponent,
-    EnfantComponent
+    EnfantComponent,
+    DirtestDirective
   ],
   imports: [
     BrowserModule,

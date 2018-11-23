@@ -6,4 +6,9 @@
 </div>
 
 <app-pere></app-pere>
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
+<hr>
+Select a color: <input matInput type="color" [(ngModel)]="theColor"/>
+<div appDirtest [onecolor]="theColor">
+haha
+</div>

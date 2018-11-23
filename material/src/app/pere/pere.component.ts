@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from '../user'
 
 @Component({
   selector: 'app-pere',
@@ -7,12 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PereComponent implements OnInit {
 
-  resultat = {}
+  resultat: User
   resultat2: any
 
   constructor() { }
 
   ngOnInit() {
+    this.resultat = new User();
   }
 
   affiche(myEvent){

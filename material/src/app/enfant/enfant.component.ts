@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import {FormControl} from "@angular/forms";
-
+import { User } from '../user'
 
 @Component({
   selector: 'app-enfant',
@@ -12,12 +12,13 @@ export class EnfantComponent implements OnInit {
   @Output() myEventEmitter = new EventEmitter();
   @Output() testEventEmitter = new EventEmitter();
 
-  monData = {user: 'Italo', age: '29'}
+  monData: User
   user: string
 
   constructor() { }
 
   ngOnInit() {
+    this.monData = new User();
   }
 
   transmet() {
