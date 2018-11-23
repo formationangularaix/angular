@@ -1,0 +1,13 @@
+<section>
+  <h1>PERE</h1>
+  <fieldset>
+    <legend>Enfant</legend>
+    <app-enfant (myEventEmitter)="affiche($event)" (testEventEmitter)="affiche2($event)" ></app-enfant>
+    <div>
+        response with blind : {{ resultat.user }}
+    </div>
+    <div>
+        response without blind : {{ resultat2 }}
+    </div>
+  </fieldset>
+</section>
